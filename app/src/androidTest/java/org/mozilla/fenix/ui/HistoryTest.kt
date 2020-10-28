@@ -7,6 +7,7 @@ package org.mozilla.fenix.ui
 import android.content.Context
 import androidx.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu
 import androidx.test.espresso.IdlingRegistry
+import androidx.test.uiautomator.UiSelector
 import kotlinx.coroutines.runBlocking
 import mozilla.components.browser.storage.sync.PlacesHistoryStorage
 import okhttp3.mockwebserver.MockWebServer
@@ -19,6 +20,7 @@ import org.mozilla.fenix.helpers.AndroidAssetDispatcher
 import org.mozilla.fenix.helpers.HomeActivityTestRule
 import org.mozilla.fenix.helpers.RecyclerViewIdlingResource
 import org.mozilla.fenix.helpers.TestAssetHelper
+import org.mozilla.fenix.helpers.TestAssetHelper.waitingTime
 import org.mozilla.fenix.helpers.TestHelper.longTapSelectItem
 import org.mozilla.fenix.ui.robots.historyMenu
 import org.mozilla.fenix.ui.robots.homeScreen
@@ -140,7 +142,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
-            Thread.sleep(10000)
+            mDevice.findObject(UiSelector().resourceId("R.id.history_list")).waitForExists(waitingTime)
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
