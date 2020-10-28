@@ -140,6 +140,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
+            Thread.sleep(10000)
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
