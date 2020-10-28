@@ -121,6 +121,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
+            mDevice.findObject(UiSelector().resourceId("R.id.history_list")).waitForExists(waitingTime)
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)

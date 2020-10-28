@@ -39,6 +39,7 @@ gcloud:
 
   test-targets:
    - class org.mozilla.fenix.ui.HistoryTest#openHistoryItemInNewTabTest
+   - class org.mozilla.fenix.ui.HistoryTest#shareHistoryItemTest
    # - package org.mozilla.fenix.glean
 
   device:
