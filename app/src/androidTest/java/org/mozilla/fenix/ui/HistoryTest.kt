@@ -84,6 +84,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
+            verifyHistoryListExists()
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
@@ -103,6 +104,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
+            verifyHistoryListExists()
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
@@ -121,7 +123,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
-            mDevice.findObject(UiSelector().resourceId("R.id.history_list")).waitForExists(waitingTime)
+            verifyHistoryListExists()
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
@@ -143,7 +145,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
-            mDevice.findObject(UiSelector().resourceId("R.id.history_list")).waitForExists(waitingTime)
+            verifyHistoryListExists()
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
@@ -164,6 +166,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
+            verifyHistoryListExists()
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
@@ -184,6 +187,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
+            verifyHistoryListExists()
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
@@ -204,6 +208,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
+            verifyHistoryListExists()
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
@@ -225,6 +230,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
+            verifyHistoryListExists()
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
@@ -254,6 +260,7 @@ class HistoryTest {
 
         homeScreen { }.openThreeDotMenu {
         }.openHistory {
+            verifyHistoryListExists()
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
@@ -277,6 +284,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
+            verifyHistoryListExists()
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
@@ -303,6 +311,7 @@ class HistoryTest {
         }.submitQuery(secondWebPage.url.toString()) {
         }.openThreeDotMenu {
         }.openHistory {
+            verifyHistoryListExists()
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list), 1)
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
@@ -330,6 +339,7 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
+            verifyHistoryListExists()
             historyListIdlingResource =
                 RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list))
             IdlingRegistry.getInstance().register(historyListIdlingResource!!)
